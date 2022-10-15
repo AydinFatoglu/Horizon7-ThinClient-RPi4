@@ -4,10 +4,12 @@
 
 mkdir /home/pi/Downloads/HClients/ 
 cd /home/pi/Downloads/HClients/
-wget https://download3.vmware.com/software/view/viewclients/CART21FQ2/VMware-Horizon-Client-2006-8.0.0-16522670.x86.bundle -o /home/pi/Downloads/HClients/
+wget https://download3.vmware.com/software/view/viewclients/CART21FQ2/VMware-Horizon-Client-2006-8.0.0-16522670.x86.bundle
+wget https://download3.vmware.com/software/view/viewclients/CART21FQ4/VMware-Horizon-Client-2012-8.1.0-17349998.x86.bundle
 
 cd /home/pi/Downloads/HClients/
 sudo chmod +x ./VMware-Horizon-Client-2006-8.0.0-16522670.x86.bundle
+sudo chmod +x ./VMware-Horizon-Client-2012-8.1.0-17349998.x86.bundle
 
 #Download Tarball Client
 cd /home/pi/Downloads/HClients/
