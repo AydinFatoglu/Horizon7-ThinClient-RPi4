@@ -1,1 +1,2 @@
-TEST
+
+https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/install.sh
