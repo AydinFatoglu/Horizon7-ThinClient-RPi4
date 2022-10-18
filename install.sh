@@ -2,24 +2,39 @@
 
 #Download Bundleed Client
 
-mkdir /home/pi/Downloads/HClients/ 
-cd /home/pi/Downloads/HClients/
-wget https://download3.vmware.com/software/view/viewclients/CART21FQ2/VMware-Horizon-Client-2006-8.0.0-16522670.x86.bundle
-wget https://download3.vmware.com/software/view/viewclients/CART21FQ4/VMware-Horizon-Client-2012-8.1.0-17349998.x86.bundle
+ 
+cd /home/pi/Downloads
+wget https://download3.vmware.com/software/view/viewclients/CART22FQ2/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609.tar.gz -O /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609.tar.gz
+tar -xzf /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609.tar.gz -C /home/pi/Downloads/
+tar -xzf /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-Client-2106.1-8.3.1-18435609.armhf.tar.gz -C /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/
+tar -xzf /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-PCoIP-2106.1-8.3.1-18435609.armhf.tar.gz -C /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/
+tar -xzf /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-USB-2106.1-8.3.1-18435609.armhf.tar.gz -C /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/
 
-cd /home/pi/Downloads/HClients/
-sudo chmod +x ./VMware-Horizon-Client-2006-8.0.0-16522670.x86.bundle
-sudo chmod +x ./VMware-Horizon-Client-2012-8.1.0-17349998.x86.bundle
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-Client-2106.1-8.3.1-18435609.armhf/bin/ /usr/bin/
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-Client-2106.1-8.3.1-18435609.armhf/lib/ /usr/lib/
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-Client-2106.1-8.3.1-18435609.armhf/doc/ /usr/share/doc/
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-Client-2106.1-8.3.1-18435609.armhf/share/locale/ /usr/share/locale/
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-PCoIP-2106.1-8.3.1-18435609.armhf/lib/ /usr/lib/
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-PCoIP-2106.1-8.3.1-18435609.armhf/lib/vmware/view/client/ /usr/bin
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-USB-2106.1-8.3.1-18435609.armhf/bin/ /usr/bin/
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-USB-2106.1-8.3.1-18435609.armhf/lib/ /usr/lib/
+sudo cp -aRT /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-USB-2106.1-8.3.1-18435609.armhf/init.d/ /etc/init.d/
 
-#Download Tarball Client
-cd /home/pi/Downloads/HClients/
-wget https://download3.vmware.com/software/view/viewclients/CART21FQ2/vmware-view-client-linux-2006-8.0.0-16522670.tar.gz
-wget https://download3.vmware.com/software/view/viewclients/CART22FQ2/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609.tar.gz
+sudo ln -s /usr/bin/vmware-usbarbitrator /usr/lib/vmware/view/usb/vmware-usbarbitrator
+sudo ln -s /usr/bin/vmware-view-usbdloader /usr/lib/vmware/view/usb/vmware-view-usbdloader
+sudo ln -s /etc/init.d/vmware-USBArbitrator /etc/rc5.d/S50vmware-USBArbitrator
+sudo ln -s /etc/init.d/vmware-USBArbitrator /etc/rc6.d/K08vmware-USBArbitrator
 
-#Setup Gui Needs
+sudo sed -i '$i/etc/init.d/vmware-USBArbitrator start' /etc/rc.local
+
+cp /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-Client-2106.1-8.3.1-18435609.armhf/share/icons/vmware-view.png /home/pi/Pictures/
+
+
+
+
+
 sudo apt-get install python-gtk2 -y
 
 
-#Download Install LXDE
-sudo apt install -y lubuntu-desktop
+
 
