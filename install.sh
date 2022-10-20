@@ -32,17 +32,19 @@ cp /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VM
 sudo apt install libgtkmm-3.0-1v5 -y
 sudo apt -y install libudev0
 
-sudo nano /usr/share/applications/ximusicplayer.desktop
-
+cat > /usr/share/applications/vmware-view.desktop <<EOL
 [Desktop Entry]
-Name=XiMusicPlayer
-GenericName=Music Player
-Comment=Xi Music Player
-Exec=/path/to/executable
-Icon=qjackctl
-Categories=Audio;AudioVideo;
+Name=HorizonClient
+GenericName=Horizon Client
+Comment=Horizon Client
+Exec=/usr/bin/vmware-view
+Icon=/home/pi/Pictures/vmware-view.png
+Categories=Office;
 Terminal=false
 Type=Application
+EOL
+
+
 
 
 
