@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo apt-get install raspberrypi-ui-mods
+
+
 cd /home/pi/Downloads
 wget https://download3.vmware.com/software/view/viewclients/CART22FQ2/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609.tar.gz -O /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609.tar.gz
 tar -xzf /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609.tar.gz -C /home/pi/Downloads/
@@ -26,8 +29,25 @@ sudo sed -i '$i/etc/init.d/vmware-USBArbitrator start' /etc/rc.local
 
 cp /home/pi/Downloads/VMware-Horizon-Client-Linux-2106.1-8.3.1-18435609/armhf/VMware-Horizon-Client-2106.1-8.3.1-18435609.armhf/share/icons/vmware-view.png /home/pi/Pictures/
 
-sudo apt-get install python-gtk2 -y
 sudo apt install libgtkmm-3.0-1v5 -y
+sudo apt -y install libudev0
+
+sudo nano /usr/share/applications/ximusicplayer.desktop
+
+[Desktop Entry]
+Name=XiMusicPlayer
+GenericName=Music Player
+Comment=Xi Music Player
+Exec=/path/to/executable
+Icon=qjackctl
+Categories=Audio;AudioVideo;
+Terminal=false
+Type=Application
+
+
+
+
+
 
 
 
