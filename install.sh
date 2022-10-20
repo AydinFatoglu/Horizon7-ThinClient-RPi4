@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install raspberrypi-ui-mods
+sudo apt-get install raspberrypi-ui-mods -y
 
 
 cd /home/pi/Downloads
