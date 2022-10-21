@@ -1,5 +1,9 @@
 # Horizon7-ThinClient-RPi4
 
+This solution will install standard desktop enviroment top of official Lite image and installs   
+
+
+
 **Operatting System**
 
 - Raspberry Pi OS Lite
