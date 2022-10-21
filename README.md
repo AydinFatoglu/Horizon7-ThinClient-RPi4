@@ -1,6 +1,8 @@
 # Horizon7-ThinClient-RPi4
 
-This solution will install standard desktop enviroment top of official Lite image and installs   
+This solution will install standard desktop environment on top of official Lite image and installs fully working VMware-Horizon-Client-Linux-2206-8.6.0-20094634 for you.
+Optionally you can use the pre-build image and flash it using raspberry pi imager software
+    
 
 
 
@@ -21,7 +23,7 @@ wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/mai
 
 **Ready to use Image**
 
-User:pi
-Password:pi
+- User:pi
+- Password:pi
 
 https://drive.google.com/file/d/1M3fGyv5uMkYl8eP8RRWat0F7PjagmMvA/view?usp=sharing
