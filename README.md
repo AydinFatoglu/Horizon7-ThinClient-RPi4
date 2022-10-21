@@ -16,6 +16,4 @@ wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/mai
 
 **Ready to use Image**
 
-https://drive.google.com/file/d/1M3fGyv5uMkYl8eP8RRWat0F7PjagmMvA/view
-
-
+https://drive.google.com/file/d/1M3fGyv5uMkYl8eP8RRWat0F7PjagmMvA/view?usp=sharing
