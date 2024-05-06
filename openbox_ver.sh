@@ -37,6 +37,8 @@ sudo ln -s /etc/init.d/vmware-USBArbitrator /etc/rc6.d/K08vmware-USBArbitrator
 sudo sed -i '$i/etc/init.d/vmware-USBArbitrator start' /etc/rc.local
 
 sudo mkdir /home/pi/Pictures
+sudo chown -R pi:pi /home/pi/Pictures
+chmod 755 /home/pi/Pictures
 cp /home/pi/Downloads/VMware-Horizon-Client-Linux-2206-8.6.0-20094634/armhf/VMware-Horizon-Client-2206-8.6.0-20094634.armhf/share/icons/vmware-view.png /home/pi/Pictures/
 
 sudo apt install libgtkmm-3.0-1v5 -y
