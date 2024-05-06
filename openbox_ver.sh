@@ -43,4 +43,4 @@ cp /home/pi/Downloads/VMware-Horizon-Client-Linux-2206-8.6.0-20094634/armhf/VMwa
 
 sudo apt install libgtkmm-3.0-1v5 -y
 sudo apt -y install libudev0
-sudo apt install libxss1
+sudo apt install libxss1 -y
