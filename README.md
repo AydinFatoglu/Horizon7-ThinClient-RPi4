@@ -20,7 +20,11 @@ https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2
 
 **Horizon Client Auto Installer (Run as root)**
 
+
 wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/install.sh && chmod +x install.sh && ./install.sh
+
+
+wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/openbox_ver.sh && chmod +x openbox_ver.sh && ./openbox_ver.sh
 
 **Ready to use Image**
 
