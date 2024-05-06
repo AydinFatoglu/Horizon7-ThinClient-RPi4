@@ -10,6 +10,8 @@ sudo systemctl disable hciuart.service &&
 sudo systemctl disable bluetooth.service && 
 
 sudo mkdir /home/pi/Downloads
+sudo chown -R pi:pi /home/pi/Downloads
+chmod 755 /home/pi/Downloads
 cd /home/pi/Downloads
 wget https://download3.vmware.com/software/CART23FQ2_LIN_2206_TARBALL/VMware-Horizon-Client-Linux-2206-8.6.0-20094634.tar.gz -O /home/pi/Downloads/VMware-Horizon-Client-Linux-2206-8.6.0-20094634.tar.gz
 tar -xzf /home/pi/Downloads/VMware-Horizon-Client-Linux-2206-8.6.0-20094634.tar.gz -C /home/pi/Downloads/
