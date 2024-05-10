@@ -61,8 +61,6 @@ vmware-view &
 EOF
 
 sudo reboot
- 
- 
-sudo reboot
+
 
 
