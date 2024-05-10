@@ -4,10 +4,20 @@ sudo apt-get update -y &&
 sudo apt-get upgrade -y && 
 sudo apt-get install lightdm openbox -y && 
 sudo raspi-config nonint do_boot_behaviour B4 && 
-sudo raspi-config nonint do_boot_wait 0 && 
+sudo raspi-config nonint do_boot_wait 0 &&
+sudo raspi-config nonint do_memory_split 256 &&
 sudo apt-get install terminator -y && 
+
 sudo systemctl disable hciuart.service && 
-sudo systemctl disable bluetooth.service && 
+sudo systemctl disable bluetooth.service &&
+sudo systemctl mask apt-daily-upgrade && 
+sudo systemctl mask apt-daily && 
+sudo systemctl disable apt-daily-upgrade.timer && 
+sudo systemctl disable apt-daily.timer && 
+
+sudo apt remove --purge avahi-daemon -y && 
+sudo apt remove --purge bluez -y && 
+sudo apt autoremove --purge -y && 
 
 sudo mkdir /home/pi/Downloads
 sudo chown -R pi:pi /home/pi/Downloads
@@ -49,6 +59,8 @@ cat << EOF > ~/.config/openbox/autostart
 # Add commands to start VMware Horizon automatically
 vmware-view &
 EOF
+
+sudo reboot
  
  
 sudo reboot
