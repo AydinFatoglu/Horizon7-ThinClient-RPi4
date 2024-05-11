@@ -56,8 +56,15 @@ sudo apt install libxss1 -y
 mkdir -p ~/.config/openbox && 
 
 cat << EOF > ~/.config/openbox/autostart
-# Add commands to start VMware Horizon automatically
-vmware-view &
+# Disable DPMS and prevent screen blanking
+xset -dpms s off s noblank s noexpose &
+
+# Existing commands
+# Loop to keep vmware-view running
+while true; do
+    vmware-view &
+    wait $!
+done &
 EOF
 
 sudo reboot
