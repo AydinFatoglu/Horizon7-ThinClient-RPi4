@@ -7,7 +7,6 @@ sudo raspi-config nonint do_boot_behaviour B4 &&
 sudo raspi-config nonint do_boot_wait 0 &&
 sudo raspi-config nonint do_memory_split 256 &&
 sudo apt-get install terminator -y &&
-sudo apt-get install xrdp -y && 
 
 sudo systemctl disable hciuart.service && 
 sudo systemctl disable bluetooth.service &&
@@ -15,7 +14,6 @@ sudo systemctl mask apt-daily-upgrade &&
 sudo systemctl mask apt-daily && 
 sudo systemctl disable apt-daily-upgrade.timer && 
 sudo systemctl disable apt-daily.timer &&
-sudo systemctl enable xrdp && 
 
 sudo apt remove --purge avahi-daemon -y && 
 sudo apt remove --purge bluez -y && 
