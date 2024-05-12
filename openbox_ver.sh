@@ -47,8 +47,6 @@ sudo ln -s /etc/init.d/vmware-USBArbitrator /etc/rc6.d/K08vmware-USBArbitrator
 
 sudo sed -i '$i/etc/init.d/vmware-USBArbitrator start' /etc/rc.local
 
-
-
 sudo apt install libgtkmm-3.0-1v5 -y
 sudo apt -y install libudev0
 sudo apt install libxss1 -y
@@ -58,8 +56,8 @@ mkdir -p ~/.config/openbox &&
 cat << EOF > ~/.config/openbox/autostart
 # Disable DPMS and prevent screen blanking
 xset -dpms s off s noblank s noexpose &
-
-# Existing commands
+#setbgcolor 
+xsetroot -solid "#7393B3" &
 # Loop to keep vmware-view running
 while true; do
     vmware-view &
