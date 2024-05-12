@@ -7,6 +7,7 @@ sudo raspi-config nonint do_boot_behaviour B4 &&
 sudo raspi-config nonint do_boot_wait 0 &&
 sudo raspi-config nonint do_memory_split 256 &&
 sudo apt-get install terminator -y &&
+sudo apt install plymouth plymouth-themes -y && 
 
 sudo systemctl disable hciuart.service && 
 sudo systemctl disable bluetooth.service &&
@@ -64,6 +65,10 @@ while true; do
     wait $!
 done &
 EOF
+
+sudo plymouth-set-default-theme -R bgrt && 
+sudo update-initramfs -u && 
+sudo sed -i 's/$/ quiet splash/' /boot/cmdline.txt && 
 
 sudo reboot
 
