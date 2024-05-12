@@ -4,8 +4,8 @@ This solution will install a standard desktop environment on top of the official
 
 Alternatively, you can use the pre-built image and flash it using Raspberry Pi Imager software. Please keep in mind to extend the file system using raspi-config after the first boot so that you can utilize your SD card's full capacity. 
     
+![Description of GIF](https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/918812e324e4ecfd996fc41592afc74bcefaa339/Screen%20Recording%20-%20Made%20with%20FlexClip.gif)
 
-![Alt Text]([https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/Screen%20Recording%20-%20Made%20with%20FlexClip.gif](https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/918812e324e4ecfd996fc41592afc74bcefaa339/Screen%20Recording%20-%20Made%20with%20FlexClip.gif))
 
 **Operatting System**
 
