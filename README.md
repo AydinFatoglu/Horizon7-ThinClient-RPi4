@@ -1,4 +1,4 @@
-# Horizon7-ThinClient-RPi4
+# Horizon Client-ThinClient-RPi4
 
 This solution will install a standard desktop environment on top of the official Lite image and fully install the VMware Horizon Client for Linux version 2206-8.6.0-20094634 for you.
 
@@ -18,11 +18,12 @@ Alternatively, you can use the pre-built image and flash it using Raspberry Pi I
 
 https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2022-09-26/2022-09-22-raspios-bullseye-armhf-lite.img.xz
 
-**Horizon Client Auto Installer (Run as root)**
+**Horizon Client Auto Installer (RASPBIAN MINIMAL DESKTOP)**
 
 
 wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/install.sh && chmod +x install.sh && ./install.sh
 
+**Horizon Client Auto Installer (OPENBOX GUI)**
 
 wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/openbox_ver.sh && chmod +x openbox_ver.sh && ./openbox_ver.sh
 
