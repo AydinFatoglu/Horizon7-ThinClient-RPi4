@@ -1,4 +1,4 @@
-# Horizon Client-ThinClient-RPi4
+# VMware Horizon Client-ThinClient-RPi4
 
 This solution will install a standard desktop environment on top of the official Lite image and fully install the VMware Horizon Client for Linux version 2206-8.6.0-20094634 for you.
 
