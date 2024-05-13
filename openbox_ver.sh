@@ -57,8 +57,12 @@ mkdir -p ~/.config/openbox &&
 cat << EOF > ~/.config/openbox/autostart
 # Disable DPMS and prevent screen blanking
 xset -dpms s off s noblank s noexpose &
-#setbgcolor 
+
+#setbgcolor
 xsetroot -solid "#7393B3" &
+#set display rez
+#xrandr --output HDMI-1 --mode 1920x1080 &
+
 # Loop to keep vmware-view running
 while true; do
     vmware-view &
