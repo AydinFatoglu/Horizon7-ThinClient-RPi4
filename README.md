@@ -17,7 +17,7 @@ This solution will install a standard desktop environment on top of the official
 
 wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/install.sh && chmod +x install.sh && ./install.sh
 
-**Horizon Client Auto Installer (OPENBOX GUI)**
+**Horizon Client Auto Installer (OPENBOX GUI with Auto Run)**
 
 wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/openbox_ver.sh && chmod +x openbox_ver.sh && ./openbox_ver.sh
 
