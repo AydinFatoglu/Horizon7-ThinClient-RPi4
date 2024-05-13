@@ -13,7 +13,7 @@ This solution will install a standard desktop environment on top of the official
 - Kernel version: 5.15
 - Debian version: 11 (bullseye)
 
-**Horizon Client Auto Installer (RASPBIAN MINIMAL DESKTOP)**
+**Horizon Client Auto Installer (RASPBIAN MINIMAL DESKTOP with Desktop Icon)**
 
 wget https://raw.githubusercontent.com/AydinFatoglu/Horizon7-ThinClient-RPi4/main/install.sh && chmod +x install.sh && ./install.sh
 
