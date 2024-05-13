@@ -2,7 +2,6 @@
 
 sudo apt-get install raspberrypi-ui-mods -y
 
-
 cd /home/pi/Downloads
 wget https://download3.vmware.com/software/CART23FQ2_LIN_2206_TARBALL/VMware-Horizon-Client-Linux-2206-8.6.0-20094634.tar.gz -O /home/pi/Downloads/VMware-Horizon-Client-Linux-2206-8.6.0-20094634.tar.gz
 tar -xzf /home/pi/Downloads/VMware-Horizon-Client-Linux-2206-8.6.0-20094634.tar.gz -C /home/pi/Downloads/
@@ -44,8 +43,8 @@ Terminal=false
 Type=Application
 EOL
 
-
-
+sudo apt-get purge chromium-browser vlc gpicview geany thonny rp-prefapps qpdfview rpi-imager piclone galculator -y
+sudo apt-get autoremove -y
 
 
 
