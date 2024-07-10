@@ -12,7 +12,7 @@ fi
 
 
 # Prompt the user for input
-read -p "Enter the server URL: " serverURL
+read -p "Enter the server URL (with https://): " serverURL
 read -p "Enter the domain (NETBIOS) name: " domainName
 read -p "Enter the user name: " userName
 read -s -p "Enter the password: " password
