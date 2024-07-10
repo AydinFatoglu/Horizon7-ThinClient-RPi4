@@ -1,5 +1,25 @@
 #!/bin/bash
 
+# Check if user pi exists, if not, create the user
+if id "pi" &>/dev/null; then
+    echo "User pi exists."
+else
+    echo "User pi does not exist. Creating user pi."
+    sudo useradd -m pi
+    sudo passwd pi
+    sudo usermod -aG sudo pi
+fi
+
+
+# Prompt the user for input
+read -p "Enter the server URL: " serverURL
+read -p "Enter the domain (NETBIOS) name: " domainName
+read -p "Enter the user name: " userName
+read -s -p "Enter the password: " password
+echo
+read -p "Enter the application name: " applicationName
+
+
 sudo apt-get update -y && 
 sudo apt-get upgrade -y && 
 sudo apt-get install lightdm openbox -y && 
@@ -54,6 +74,7 @@ sudo apt install libxss1 -y
 
 mkdir -p ~/.config/openbox && 
 
+# Create the autostart file with the provided values
 cat << EOF > ~/.config/openbox/autostart
 # Disable DPMS and prevent screen blanking
 xset -dpms s off s noblank s noexpose &
@@ -65,10 +86,12 @@ xsetroot -solid "#7393B3" &
 
 # Loop to keep vmware-view running
 while true; do
-    vmware-view &
-    wait $!
+    vmware-view  --serverURL $serverURL --useExisting --userName $userName --password $password --domainName $domainName --nonInteractive --applicationName "$applicationName" &
+    wait \$!
 done &
 EOF
+
+echo "File created at ~/.config/openbox/autostart"
 
 sudo plymouth-set-default-theme -R bgrt && 
 sudo update-initramfs -u && 
